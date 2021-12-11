@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header id="header">
     <img class="profile" src="https://github.com/mpedroni.png" alt="Matheus Pedroni">
     <div class="content-wrapper">
       <div>
@@ -41,50 +41,82 @@
     </div>
   </header>
 
-  <div class="content">
-    <aside class="card">
-      <nav class="menu">
-        <ul>
-          <li>
-            <a href="#about" id="#about" default>
-              <i data-feather="user"></i>
-              Sobre Mim
-            </a>
-          </li>
+  <div id="content">
+    <nav class="card menu">
+      <ul>
+        <li>
+          <a href="#about" id="#about" default>
+            <i data-feather="user"></i>
+            Sobre Mim
+          </a>
+        </li>
 
-          <li>
-            <a href="#skills" id="#skills">
-              <i data-feather="bar-chart-2"></i>
-              Skills
-            </a>
-          </li>
+        <li>
+          <a href="#skills" id="#skills">
+            <i data-feather="bar-chart-2"></i>
+            Skills
+          </a>
+        </li>
 
-          <li>
-            <a href="#experience" id="#experience">
-              <i data-feather="clipboard"></i>
-              Experiência
-            </a>
-          </li>
+        <li>
+          <a href="#experience" id="#experience">
+            <i data-feather="clipboard"></i>
+            Experiência
+          </a>
+        </li>
 
-          <li>
-            <a href="#courses-and-awards" id="#courses-and-awards">
-              <i data-feather="award"></i>
-              Cursos e Prêmios
-            </a>
-          </li>
+        <li>
+          <a href="#courses-and-awards" id="#courses-and-awards">
+            <i data-feather="award"></i>
+            Cursos e Prêmios
+          </a>
+        </li>
 
-          <li>
-            <a href="#education" id="#education">
-              <i data-feather="book-open"></i>
-              Educação
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+        <li>
+          <a href="#education" id="#education">
+            <i data-feather="book-open"></i>
+            Educação
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-    <main class="card">
+    <main class="main">
+      <article class="card about">
+        <header>
+          <h3 class="title">
+            Sobre Mim
+          </h3>
+        </header>
 
+        <section class="body">
+          <section class="main-techs">
+            <img src="./assets/icons/techs/reactjs.svg" alt="ReactJS Icon">
+            <img src="./assets/icons/techs/typescriptlang.svg" alt="TypeScript Icon">
+            <img src="./assets/icons/techs/elixir.svg" alt="Elixir Icon">
+          </section>
+
+          <section class="content">
+            <p>
+              Graduando em Engenharia de Computação, atualmente cursando o 6º período, na Universidade do Vale do
+              Itajaí
+              (UNIVALI).
+            </p>
+            <p>
+              Desenvolvedor fullstack, acusado de favoritismo pelo frontend (e com razão haha). De fato, atualmente meu
+              foco está no frontend com ReactJS e Next.js. Também possuo experiência com Vue.js.
+            </p>
+            <p>
+              Além do ReactJS e do Next.js, também estou estudando (e apaixonado por) programação funcional com Elixir.
+            </p>
+            <p>
+              Entre os meus hobbies estão: jogar, ler, escutar músicas, ver séries e estudar (quando não ReactJS,
+              Next.js
+              e Elixir) assuntos relacionados a blockchain e criptomoedas.
+            </p>
+          </section>
+        </section>
+      </article>
     </main>
   </div>
 </body>

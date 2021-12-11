@@ -3,13 +3,13 @@
 @use "mixins";
 @use "variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@400;700&display=swap");
 
-.header {
+#header {
   @include mixins.container();
 
   display: flex;
-  padding: 4rem 1rem 6rem;
+  padding: 3rem 1rem 6rem;
 
   .profile {
     box-shadow: 1px 0 2px 0 var(--bg-color-highlight);
@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    
+
     height: 12rem;
 
     h1 {
@@ -49,57 +49,103 @@
         transition: filter 0.2s;
 
         &:hover {
-          filter: brightness(0.9)
+          filter: brightness(0.9);
         }
       }
     }
   }
-
 }
 
-.content {
+#content {
   @include mixins.container();
 
   display: grid;
   grid-template-columns: 3fr 5fr;
   gap: 6rem;
+}
 
-  .card {
-    background: var(--card-bg);
-    border-radius: 1rem;
+.card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  overflow: hidden;
+  height: fit-content;
+  padding-bottom: 4rem;
+
+  .title {
+    background: var(--card-title-bg);
+    padding: 1.125rem 2rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--highlight);
+    font-size: 1.125rem;
+    text-transform: uppercase;
   }
-  
-  .menu {
-    padding: 3rem 2rem 4rem;
 
-    ul {
-      list-style: none;
+  .content {
+    padding: 0 2rem;
+
+    p + p {
+      margin-top: 1rem;
+    }
+
+    p {
+      color: var(--body);
+      line-height: 150%;
+      text-indent: 2rem;
+    }
+  }
+}
+
+.menu {
+  padding: {
+    top: 3rem;
+    right: 2rem;
+    left: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--heading);
+
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 1rem;
 
-      a {
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.125rem;
-        font-weight: 700;
-        color: var(--heading);
+      transition: color, filter 0.2s;
 
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        transition: color, filter 0.2s;
-
-        &.active {
-          color: var(--highlight);
-        }
-
-        &:hover:not(.active) {
-          filter: brightness(0.9);
-        }
+      &.active {
+        color: var(--highlight);
       }
+
+      &:hover:not(.active) {
+        filter: brightness(0.9);
+      }
+    }
+  }
+}
+
+.main {
+  .about {
+    .main-techs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      margin-bottom: 1rem;
     }
   }
 }
