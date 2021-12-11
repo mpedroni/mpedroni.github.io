@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="./styles/main.scss">
 
   <title>Matheus Pedroni | Resume</title>
 </head>
+
 <body>
   <header class="header">
     <img class="profile" src="https://github.com/mpedroni.png" alt="Matheus Pedroni">
@@ -37,5 +40,59 @@
       </div>
     </div>
   </header>
+
+  <div class="content">
+    <aside class="card">
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#about" id="#about" default>
+              <i data-feather="user"></i>
+              Sobre Mim
+            </a>
+          </li>
+
+          <li>
+            <a href="#skills" id="#skills">
+              <i data-feather="bar-chart-2"></i>
+              Skills
+            </a>
+          </li>
+
+          <li>
+            <a href="#experience" id="#experience">
+              <i data-feather="clipboard"></i>
+              Experiência
+            </a>
+          </li>
+
+          <li>
+            <a href="#courses-and-awards" id="#courses-and-awards">
+              <i data-feather="award"></i>
+              Cursos e Prêmios
+            </a>
+          </li>
+
+          <li>
+            <a href="#education" id="#education">
+              <i data-feather="book-open"></i>
+              Educação
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="card">
+
+    </main>
+  </div>
 </body>
+
+<script src="./scripts/getActiveLink.js"></script>
+
+<script>
+  feather.replace()
+</script>
+
 </html>

@@ -5,9 +5,12 @@
 }
 
 body {
-  height: 100vh;
-  background: var(--bg-color);
+  height: 100%;
+  background: linear-gradient(180deg, var(--bg-color-highlight) 0%, var(--bg-color) 70%);
   -webkit-font-smoothing: antialiased;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body, input, textarea, button {

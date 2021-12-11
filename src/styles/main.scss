@@ -6,15 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@400;700&display=swap');
 
 .header {
-  max-width: var(--max-width);
-  margin: 0 auto;
+  @include mixins.container();
 
   display: flex;
-  align-items: center;
   padding: 4rem 1rem 6rem;
 
   .profile {
-    box-shadow: 1px 1px 1px 0 var(--bg-color);
+    box-shadow: 1px 0 2px 0 var(--bg-color-highlight);
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
@@ -46,7 +44,62 @@
       display: flex;
       align-items: center;
       gap: 2rem;
+
+      img {
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(0.9)
+        }
+      }
     }
   }
 
+}
+
+.content {
+  @include mixins.container();
+
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  gap: 6rem;
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+  }
+  
+  .menu {
+    padding: 3rem 2rem 4rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--heading);
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        transition: color, filter 0.2s;
+
+        &.active {
+          color: var(--highlight);
+        }
+
+        &:hover:not(.active) {
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
 }
