@@ -99,14 +99,19 @@
   }
 }
 
-.menu {
-  padding: {
-    top: 3rem;
-    right: 2rem;
-    left: 2rem;
-  }
+.sidebar {
+  position: sticky;
+  top: 3rem;
 
-  ul {
+  height: fit-content;
+
+  .menu {
+    padding: {
+      top: 3rem;
+      right: 2rem;
+      left: 2rem;
+    }
+
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -138,6 +143,10 @@
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
   .about {
     .main-techs {
       display: flex;

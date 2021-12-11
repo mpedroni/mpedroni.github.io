@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('nav.menu ul li a');
+const links = document.querySelectorAll('.menu li a');
 
 function getActiveLink(event) {
   const hash = event.currentTarget.location.hash;
