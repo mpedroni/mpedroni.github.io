@@ -230,33 +230,102 @@
     .content {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
 
-      .topics {
-        display: flex;
-        flex-direction: column;
+      .experience {
+        & + .experience {
+          border-top: solid thin var(--highlight);
+          padding-top: 2rem;
+        }
 
-        padding-left: 1rem;
+        &:not(:last-child) {
+          padding-bottom: 2rem;
+        }
 
-        .topic {
-          & + .topic {
-            margin-top: 2rem;
-          }
-
+        .topics {
           display: flex;
           flex-direction: column;
 
-          .label {
-            color: var(--heading);
-            font-size: 0.6875rem;
-            font-weight: bold;
-            text-transform: uppercase;
-          }
+          padding-left: 1rem;
 
-          .techs {
+          .topic {
+            & + .topic {
+              margin-top: 2rem;
+            }
+
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            flex-direction: column;
+
+            .label {
+              color: var(--heading);
+              font-size: 0.6875rem;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+
+            .techs {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .awards {
+    & + .awards {
+      margin-top: 3rem;
+    }
+
+    h5 {
+      color: var(--highlight);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    time {
+      display: block;
+      color: var(--body);
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      color: var(--heading);
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .awards {
+      .award {
+        & + .award {
+          padding-top: 2rem;
+          border-top: solid thin var(--highlight);
+        }
+
+        &:not(:last-child) {
+          padding-bottom: 2rem;
+        }
+
+        padding-left: 1rem;
+
+        a {
+          text-decoration: none;
+          color: var(--highlight);
+
+          display: inline-flex;
+          align-items: center;
+          gap: 0.2rem;
+          text-indent: 0;
+
+          .icon {
+            width: 1rem;
+
+            &--small {
+              width: 0.8rem;
+            }
           }
         }
       }
