@@ -212,6 +212,56 @@
       }
     }
   }
+
+  .experiences {
+    h4 {
+      color: var(--heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    time {
+      display: block;
+      color: var(--body);
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .topics {
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 1rem;
+
+        .topic {
+          & + .topic {
+            margin-top: 2rem;
+          }
+
+          display: flex;
+          flex-direction: column;
+
+          .label {
+            color: var(--heading);
+            font-size: 0.6875rem;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+
+          .techs {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* 
