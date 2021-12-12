@@ -71,6 +71,8 @@
   height: fit-content;
   padding-bottom: 4rem;
 
+  box-shadow: 2px 2px 4px 0 var(--bg-color);
+
   .title {
     background: var(--card-title-bg);
     padding: 1.125rem 2rem;
@@ -328,6 +330,52 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .education {
+    time,
+    .type,
+    .stage {
+      display: block;
+      color: var(--body);
+      font-size: 0.75rem;
+    }
+
+    time {
+      margin-bottom: 1rem;
+    }
+
+    .type,
+    .stage {
+      text-transform: uppercase;
+    }
+
+    .label {
+      color: var(--heading);
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .topic {
+      a {
+        text-decoration: none;
+
+        h5 {
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          color: var(--highlight);
+        }
+      }
+
+      .item {
+        & + .item {
+          margin-top: 3rem;
+        }
+
+        padding-left: 1rem;
       }
     }
   }
