@@ -4,27 +4,39 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   padding-bottom: 5rem;
   -webkit-font-smoothing: antialiased;
-  
+
   background: linear-gradient(180deg, var(--bg-color-highlight) 0%, var(--bg-color) 70%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-body, input, textarea, button {
-  font-family: 'Roboto', sans-serif;
+body,
+input,
+textarea,
+button {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
 h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 900;
 }
 
-h2, h3, h4, h5, h6, strong {
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-weight: 700;
 }
 

@@ -1,15 +1,31 @@
-const links = document.querySelectorAll('.menu li a');
+const links = document.querySelectorAll('a[href*="#"]');
+const articles = document.querySelectorAll('article');
 
-function getActiveLink(event) {
-  const hash = event.currentTarget.location.hash;
+window.addEventListener('scroll', () => {
+  let current = "";
 
-  links.forEach(link => {
-    link.classList[link.hash === hash ? 'add' : 'remove']('active');
+  articles.forEach((article) => {
+    const articleTop = article.offsetTop;
 
-    if(!hash) 
-      links.item('#about').classList.add('active');
-  })
-};
+    if (scrollY >= articleTop - 150)
+      current = article.getAttribute("id");
+  });
 
-window.addEventListener('hashchange', getActiveLink);
-window.addEventListener('load', getActiveLink);
+  links.forEach((link) => {
+    link.classList.remove('active')
+    if (link.hash?.replace?.('#', '') === current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash;
+  const article = document.querySelector(`article${hash}`);
+
+  if (article)
+    window.scrollTo({
+      top: article.offsetTop - 48,
+    });
+
+})
