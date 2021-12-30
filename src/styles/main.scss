@@ -5,6 +5,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@400;700&display=swap");
 
+@keyframes card-load-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 #header {
   @include mixins.container();
 
@@ -65,6 +76,10 @@
 }
 
 .card {
+  &--animate {
+    animation: card-load-animation 1s ease;
+  }
+
   background: var(--card-bg);
   border-radius: 1rem;
   overflow: hidden;
